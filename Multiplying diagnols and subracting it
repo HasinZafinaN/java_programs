@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+	public static void main(String []args) {
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		int arr[][] = new int[size][size];
+		int dia1=1;
+		int dia2=1;
+		for(int i=0;i<size;i++){
+		    for(int j=0;j<size;j++){
+		        arr[i][j]=sc.nextInt();
+		    }
+		}
+		for(int i=0;i<size;i++){
+		    for(int j=0;j<size;j++){
+		        if(i==j){
+		            dia1=dia1*arr[i][j];
+		        }if(i+j==size-1){
+		            dia2=dia2*arr[i][j];
+		        }
+		    }
+		}
+		if(dia1>dia2){
+		    System.out.print(dia1-dia2);
+		}else{
+		    System.out.print(dia2-dia1);
+		}
+		    
+	}
+}
