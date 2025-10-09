@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int size=16;
+		int replace=Integer.MIN_VALUE;
+		int arr[]={1,5,2,5,2,5,5,2,1,9,6,7,9,9,1,1};
+		for(int i=0;i<size;i++){
+		    boolean dup=false;
+		    for(int j=i+1;j<size;j++){
+		        if(arr[i]==arr[j]&&arr[j]!=replace){
+		            arr[j]=replace;
+		            dup=true;
+		        }
+		    }
+		    if(dup){
+		        System.out.print(arr[i]+" ");
+		    }
+		}
+	}
+}
+		
